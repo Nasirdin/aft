@@ -1,0 +1,111 @@
+.card {
+  width: 250px;
+  height: 330px;
+  -webkit-box-shadow: 0px 0px 27px -5px rgba(0, 0, 0, 0.79);
+  box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.79);
+  border-radius: 6px;
+  cursor: pointer;
+  background: url(./soccer-background-vector-262278.jpg) center/cover;
+  transition: 0.3s;
+  &:hover {
+    background-size: 101%;
+  }
+  &__date {
+    background-color: #999999a1;
+    width: 70%;
+    text-align: center;
+    margin: 10px auto 50px;
+    font-style: italic;
+    font-size: 13px;
+    padding: 2px 0;
+    position: relative;
+    &::before {
+      position: absolute;
+      left: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #000;
+    }
+  }
+  &__title {
+    background-color: #000000be;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    font-size: 20px;
+    &::after,
+    &::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      background-color: #fff;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &::before {
+      left: 20px;
+    }
+    &::after {
+      right: 20px;
+    }
+  }
+  &__tour-number {
+    width: 60px;
+    height: 60px;
+    border: 4px dashed #999;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    color: #e84631;
+    font-weight: 700;
+  }
+  &__team-info {
+    width: 100%;
+    background-color: #2a2b3cad;
+    padding: 10px 10px;
+  }
+  &__vs {
+    display: block;
+    text-align: center;
+    color: #fff;
+  }
+  &__team_second {
+    justify-content: flex-end;
+  }
+  .team {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    &__name {
+      font-size: 18px;
+      color: #fff;
+    }
+    &__img {
+      width: 20px;
+    }
+    &__score {
+      color: #fff;
+    }
+  }
+}
+
+@media (max-width: 830px) {
+  .card {
+    width: 45%;
+  }
+}
+@media (max-width: 600px) {
+  .card {
+    width: 80%;
+  }
+}
